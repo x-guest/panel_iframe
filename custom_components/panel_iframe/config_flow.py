@@ -12,10 +12,10 @@ from homeassistant.config_entries import ConfigFlow, OptionsFlow, ConfigEntry
 from .manifest import manifest
 
 mode_list = {
-    '0': '默认',
-    '1': '全屏',
-    '2': '新页面',
-    '3': '内置页面'
+    '0': 'По умолчанию',
+    '1': 'Полный экран',
+    '2': 'Новая страница',
+    '3': 'Встроенная страница'
 }
 
 class SimpleConfigFlow(ConfigFlow, domain=manifest.domain):
@@ -61,11 +61,11 @@ class OptionsFlowHandler(OptionsFlow):
                 vol.Required("proxy_access", default=options.get('proxy_access', False)): bool,
             })
             return self.async_show_form(step_id="user", data_schema=DATA_SCHEMA, errors=errors)
-        # 选项更新
+        # Обновление опции
         user_input['icon'] = user_input['icon'].strip().replace('mdi-', 'mdi:')
         user_input['url'] = user_input['url'].strip()
 
-        # 内置页面禁止使用代理
+        # Запрет на использование прокси во встроенных страницах 
         if user_input['mode'] == '3':
             user_input['proxy_access'] = False
 
