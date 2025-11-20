@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>侧边栏管理</title>
+  <title>Управление боковой панелью</title>
   <style>
     html,
     body {
@@ -93,7 +93,7 @@
 
 <body>
   <div>
-    <div class="loader">Loading...</div>
+    <div class="loader">Загрузка...</div>
     <a id="link" target="_blank">https://github.com/shaonianzhentan</a>
     <a id="orgin" target="_blank">github.com</a>
   </div>
@@ -109,7 +109,7 @@
         if (!location.search) return;
         let query = new URLSearchParams(location.search)
         let url = decodeURIComponent(query.get('url'))
-        // 显示链接在界面
+        // Ссылка будет отображена в интерфейсе.
         setLink('link', url, url)
 
         if (url.startsWith('http')) {
@@ -118,11 +118,11 @@
         }
 
         let mode = query.get('mode')
-        // 如果HTTPS协议，则打开新页面
+        // Если используете HTTPS, откройте новую страницу.
         if (location.protocol === 'https:' && url.indexOf('http://') == 0) {
           return window.open(url)
         }
-        // 打开新页面
+        // Открыть новую страницу
         if (mode == 2) {
           return window.open(url)
         }
