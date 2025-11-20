@@ -118,34 +118,34 @@ customElements.whenDefined('ha-panel-lovelace').then(() => {
     render() {
       const { config, title } = this.panel
       let { url, mode } = config
-      // 如果传入的是端口号
+      // Если входные данные — номер порта
       if (/^\d+$/.test(url)) {
         url = 'http://' + location.hostname + ':' + url
       }
-      // 如果传入的双斜杠，则忽略默认端口
+      // Если переданы две косые черты, порт по умолчанию будет проигнорирован.
       if (url.indexOf('//') == 0) {
         url = location.protocol + '//' + location.hostname + url.substring(1)
       }
-      // 如果传入端口路径
+      // Если портовый путь пройден
       if (url.indexOf(':') == 0) {
         url = location.protocol + '//' + location.hostname + url
       }
-      // 内置页面
+      // Встроенные страницы
       if (mode == 3) {
         history.replaceState(null, null, url)
         return this.fireEvent('location-changed', { replace: true })
       }
-      // 如果HTTPS协议，则打开新页面
+      // Если используете HTTPS, откройте новую страницу.
       if (location.protocol === 'https:' && url.indexOf('http://') == 0) {
         
       } else {
-        // 全屏显示
+        // Полноэкранный
         if (mode == 1) {
           return html`<iframe allow="fullscreen" src="${url}" style="height:100vh;"></iframe>
             ${this.narrow ? html`<ha-icon-button class="nav-button" @click=${this._toggleMenu.bind(this)}><ha-icon icon="mdi:home-assistant"></ha-icon></ha-icon-button>` : ''}`
         }
       }
-      // 内置显示
+      // Встроенный дисплей
       return html`<div class="toolbar">
           <ha-menu-button
             .hass=${this.hass}
