@@ -17,17 +17,17 @@ class HttpProxy:
         self.proxy_path = route_path
 
     def register(self, router):
-        ''' 路由注册 '''
+        ''' Регистрация маршрутизатора '''
         route_url = f'/{self.proxy_path}/' + '{tail:.*}'
         # print(route_url)
         router.add_route('*', route_url, self.handler)
 
     def get_url(self, hostname=''):
-        ''' 获取访问地址 '''
+        ''' Извлечение адрес доступа '''
         return f'{hostname}/{self.proxy_path}/'
 
     def get_path(self, request):
-        ''' 获取真实路径地址 '''
+        ''' Извлечение реального адреса '''
         url_path = request.rel_url.path
         if self.is_root:
             url_path = url_path.replace(f'/{self.proxy_path}', '')
