@@ -16,7 +16,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     await hass.http.async_register_static_paths(
         [ StaticPathConfig("/panel_iframe_www", hass.config.path("custom_components/" + DOMAIN + "/www"), False) ]
     )
-    # 添加面板
+    # Добавить панель
     cfg = entry.options
     url_path = entry.entry_id
     title = entry.title
@@ -58,5 +58,5 @@ async def update_listener(hass, entry):
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     url_path = entry.entry_id
     hass.components.frontend.async_remove_panel(url_path)
-    # 移除路由监听
+    # Удалить прослушиватель маршрута
     return True
