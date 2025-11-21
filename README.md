@@ -24,7 +24,7 @@
 - Адрес доступа к внутренней сети：`http://localhost:1880/node-red/`
 - Адрес доступа через прокси：`http://HASS адрес:8123/node-red/`
 
-## Если этот проект вам полезен, угостить автора выпивкой.<del style="font-size: 14px;">кофе</del>или чай с молоком!😘
+## Если этот проект вам полезен, угостите автора выпивкой.<del style="font-size: 14px;">кофе</del>или чай с молоком!😘
 Alipay | WeChat |
 |---|---|---|
 Чай с молоком= | <img src="https://github.com/shaonianzhentan/ha-docs/raw/master/docs/img/alipay.png" align="left" height="160" width="160" alt="Alipay" title="Alipay">  |  <img src="https://github.com/shaonianzhentan/ha-docs/raw/master/docs/img/wechat.png" align="left" height="160" width="160" alt="WeChat Pay" title="WeChat">
