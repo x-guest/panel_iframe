@@ -1,4 +1,4 @@
-# 侧边栏面板
+# Боковая панель
 
 [![hacs_badge](https://img.shields.io/badge/Home-Assistant-%23049cdb)](https://www.home-assistant.io/)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
@@ -6,29 +6,29 @@
 
 ![visit](https://visitor-badge.laobi.icu/badge?page_id=shaonianzhentan.panel_iframe&left_text=visit)
 
-## 安装方式
+## Способ установки
 
-安装完成重启HA，刷新一下页面，在集成里搜索`侧边栏面板`即可
+После установки перезапустите HA, обновите страницу и найдите «боковую панель» в интеграциях.
 
 [![Add Integration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=panel_iframe)
 
-注意：长按侧边栏面板标题`Home Assistant`可隐藏菜单
+Примечание: Нажмите и удерживайте заголовок боковой панели «Home Assistant», чтобы скрыть меню.
 
 
-## 使用方法
+## Как использовать
 
 
 
-**代理访问**
+**Прокси-доступ**
 
-- 内网访问地址：`http://localhost:1880/node-red/`
-- 代理访问地址：`http://HASS地址:8123/node-red/`
+- Адрес доступа к внутренней сети：`http://localhost:1880/node-red/`
+- Адрес доступа через прокси：`http://HASS адрес:8123/node-red/`
 
-## 如果这个项目对你有帮助，请我喝杯<del style="font-size: 14px;">咖啡</del>奶茶吧😘
-|  |支付宝|微信|
+## Если этот проект вам полезен, угостить автора выпивкой.<del style="font-size: 14px;">кофе</del>или чай с молоком!😘
+Alipay | WeChat |
 |---|---|---|
-奶茶= | <img src="https://github.com/shaonianzhentan/ha-docs/raw/master/docs/img/alipay.png" align="left" height="160" width="160" alt="支付宝" title="支付宝">  |  <img src="https://github.com/shaonianzhentan/ha-docs/raw/master/docs/img/wechat.png" align="left" height="160" width="160" alt="微信支付" title="微信">
+Чай с молоком= | <img src="https://github.com/shaonianzhentan/ha-docs/raw/master/docs/img/alipay.png" align="left" height="160" width="160" alt="Alipay" title="Alipay">  |  <img src="https://github.com/shaonianzhentan/ha-docs/raw/master/docs/img/wechat.png" align="left" height="160" width="160" alt="WeChat Pay" title="WeChat">
 
 
-#### 关注我的微信订阅号，了解更多HomeAssistant相关知识
-<img src="https://github.com/shaonianzhentan/ha-docs/raw/master/docs/img/wechat-channel.png" align="left" height="160" alt="HomeAssistant家庭助理" title="HomeAssistant家庭助理"> 
+#### Подпишитесь на учетную запись автора в WeChat, чтобы узнать больше о Home Assistant.
+<img src="https://github.com/shaonianzhentan/ha-docs/raw/master/docs/img/wechat-channel.png" align="left" height="160" alt="HomeAssistant" title="HomeAssistant"> 
